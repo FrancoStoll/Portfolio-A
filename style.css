@@ -1,9 +1,3 @@
-/*CSS Reset / Normalize*/
-/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
-en las secciones señaladas */
-/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
-coloque nas sessões indicadas*/
-
 :root {
   /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
   /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
@@ -28,18 +22,6 @@ a {
   text-decoration: none;
   color: var(--cor-de-link);
 }
-
-/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
-
-Lo que es el BEM?
-
-BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
-desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
-independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
-con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
-
-Enlace de la documentación oficial!
-https://en.bem.info/methodology/quick-start/*/
 
 .tudo {
   max-width: 1200px;
@@ -224,11 +206,130 @@ section.hobbies {
 /* Experiencia Académica*/
 
 section.academic {
+  background: #eaf2fd;
+  padding: 1rem;
+}
+.academic .academic__title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 37.57px;
+  text-align: center;
+  color: #464646;
+}
+.academic__courses__list {
+  padding: 0;
+}
+
+.academic__courses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.academic__courses__box {
+  padding: 16px 0px 0px 0px;
+  display: flex;
+}
+.academic__courses__box {
+  flex-grow: 1;
+}
+
+.academic__courses__item__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  width: 296px;
+  height: 118px;
+  object-fit: contain;
+  padding: 16px;
+}
+.academic__courses__item__img img {
+  width: 84px;
+  height: 58px;
+}
+.academic__courses__item__title {
+  color: #464646;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18.78px;
+}
+.academic__courses__item__title h4 {
+  margin: 10px 0 0;
+}
+.academic__courses__item__subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.44px;
 }
 
 /* experiencia*/
 
 section.experience {
+  padding: 1rem;
+}
+
+.experience__section__title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 37.57px;
+  text-align: center;
+  color: #464646;
+}
+
+.experience__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: 296px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.experience__img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.experience__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.experience__info {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18.78px;
+  color: #464646;
+}
+.experience__text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.44px;
+}
+
+.experiencia__botao--repo,
+.experience__botao--demo {
+  padding: 0.7rem 1rem;
+  outline: none;
+  border: 1px solid #2a7ae4;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16.44px;
+}
+
+.experiencia__botao--repo {
+  background-color: #ffffff;
+  color: #2a7ae4;
+  margin-right: 10px;
+}
+.experience__botao--demo {
+  background-color: #2a7ae4;
+  color: #ffffff;
 }
 
 /*Contacto*/
@@ -299,7 +400,25 @@ Utiliza las referencias de los breakpoints @media abajo */
 
   /*Formación Académica*/
 
+  .academic__courses {
+    flex-direction: row;
+  }
+  .academic__courses__list .academic__courses__item__img {
+    width: 224px;
+    height: 118px;
+    padding: 16px 0px 0px 0px;
+    background-color: #fff;
+  }
+  .academic__courses__list .academic__courses__item__img img {
+    width: 84px;
+    height: 58px;
+  }
+
   /*Experiencia Profesional*/
+
+  .experience__box {
+    width: 704px;
+  }
 }
 
 /* Desktop */
@@ -358,5 +477,31 @@ Utiliza las referencias de los breakpoints @media abajo */
   .about__container img {
     width: 160px;
     height: 55px;
+  }
+  .academic__courses {
+    flex-direction: row;
+  }
+
+  .academic__courses__list .academic__courses__item__img {
+    width: 368px;
+    height: 286px;
+    padding: 16px 0px 0px 0px;
+    background-color: #fff;
+  }
+  .academic__courses__list .academic__courses__item__img img {
+    width: 192px;
+    height: 130px;
+  }
+
+  .experience__box {
+    padding: 0;
+    margin: 0 0;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  .experience__info {
+    white-space: nowrap;
   }
 }
