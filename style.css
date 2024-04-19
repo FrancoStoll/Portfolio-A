@@ -157,7 +157,6 @@ section.about {
 .about__container {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
 }
 .about__title {
   width: 94px;
@@ -187,6 +186,36 @@ section.about {
   height: 52px;
 }
 
+/* section skills  */
+.skills {
+  padding: 1rem;
+}
+
+.skills__title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 25.83px;
+  text-align: center;
+  color: rgba(70, 70, 70, 1);
+}
+.skills__line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.skills__box {
+  position: relative;
+  width: 156px;
+  height: 118px;
+  padding: 16px 0px 0px 0px;
+  background: #ffffff;
+  flex-grow: 1;
+}
+.skills__box ul {
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+}
 /*Sección Hobbies*/
 
 section.hobbies {
@@ -307,9 +336,9 @@ Utiliza las referencias de los breakpoints @media abajo */
     height: 368px;
   }
 
-.about__paragraph {
-  width: 751px;
-}
+  .about__paragraph {
+    width: 751px;
+  }
   .about {
     margin-top: 16px;
   }
